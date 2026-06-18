@@ -1,571 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avon &amp; West Plumbing &amp; Heating | Plumber in Bristol</title>
+  <meta name="description" content="Friendly, family-run plumbing &amp; heating across Bristol. Gas Safe registered, fully insured, no call-out fee. Free quotes &amp; 24/7 emergency call-outs.">
+
+  <!-- PRE-LAUNCH: this blocks search engines. DELETE this line on launch day so Google can index the site. -->
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="SageOwl Sites — Affordable websites for local UK businesses.">
-  <title>SageOwl Sites — Portfolio</title>
+
+  <!-- GOOGLE ANALYTICS: paste the client's real GA4 snippet here on launch.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --sage:      #7a8b6e;
-      --dusty:     #c5908e;
-      --rose:      #d3a6a8;
-      --gold:      #b59e5c;
-      --parchment: #f5f1e6;
-      --black:     #000000;
-      --white:     #ffffff;
-    }
-
-    body {
-      background-color: var(--parchment);
-      color: var(--black);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    /* ── HEADER ── */
-    .site-header {
-      background-color: var(--black);
-      padding: 1.75rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .header-logo {
-      height: 52px;
-      width: 52px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .header-text h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.01em;
-      line-height: 1.2;
-    }
-
-    .header-text .tagline {
-      font-size: 0.75rem;
-      color: var(--sage);
-      font-weight: 400;
-      margin-top: 0.2rem;
-    }
-
-    .header-cta {
-      background-color: transparent;
-      border: 1px solid var(--dusty);
-      color: var(--dusty);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.55rem 1.25rem;
-      border-radius: 2px;
-      cursor: pointer;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background-color 0.15s ease, color 0.15s ease;
-    }
-
-    .header-cta:hover {
-      background-color: var(--dusty);
-      color: var(--white);
-    }
-
-    /* ── INTRO ── */
-    .intro {
-      background-color: var(--white);
-      border-bottom: 1px solid var(--rose);
-      padding: 3rem 2.5rem 2.5rem;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .intro-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1.25;
-      max-width: 520px;
-    }
-
-    .intro-text p {
-      color: var(--sage);
-      font-size: 0.9rem;
-      margin-top: 0.85rem;
-      max-width: 480px;
-      line-height: 1.7;
-    }
-
-    .intro-stats {
-      display: flex;
-      gap: 2.5rem;
-      flex-shrink: 0;
-    }
-
-    .stat { text-align: center; }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--black);
-      display: block;
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--sage);
-      font-weight: 500;
-      margin-top: 0.35rem;
-      display: block;
-    }
-
-    .stat-divider {
-      width: 1px;
-      background-color: var(--rose);
-      align-self: stretch;
-    }
-
-    /* ── PORTFOLIO SECTION ── */
-    .portfolio {
-      padding: 2.5rem 2.5rem 3rem;
-    }
-
-    .portfolio-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 1.75rem;
-    }
-
-    .section-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 600;
-      color: var(--sage);
-    }
-
-    /* ── CARD GRID ── */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.25rem;
-    }
-
-    /* ── SITE CARD ── */
-    .site-card {
-      background-color: var(--white);
-      border: 1px solid var(--rose);
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.15s ease;
-    }
-
-    .site-card:hover {
-      border-color: var(--sage);
-    }
-
-    /* Card colour band */
-    .card-band {
-      height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
-
-    .band-sage  { background-color: var(--sage);      color: var(--white);     }
-    .band-black { background-color: var(--black);     color: var(--parchment); }
-    .band-gold  { background-color: var(--gold);      color: var(--black);     }
-    .band-dusty { background-color: var(--dusty);     color: var(--white);     }
-    .band-rose  { background-color: var(--rose);      color: var(--black);     }
-
-    .card-body {
-      padding: 1.25rem 1.25rem 1rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1.3;
-    }
-
-    .card-meta {
-      font-size: 0.78rem;
-      color: var(--sage);
-      margin-top: 0.25rem;
-    }
-
-    .card-desc {
-      font-size: 0.82rem;
-      color: var(--sage);
-      margin-top: 0.6rem;
-      line-height: 1.55;
-      flex: 1;
-    }
-
-    .card-footer {
-      padding: 0.85rem 1.25rem;
-      border-top: 1px solid var(--rose);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-
-    /* ── BADGES ── */
-    .badge {
-      display: inline-block;
-      font-size: 0.62rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.22rem 0.6rem;
-      border-radius: 2px;
-    }
-
-    .badge-live  { background-color: var(--sage);  color: var(--white); }
-    .badge-demo  { background-color: var(--rose);  color: var(--black); }
-    .badge-built { background-color: var(--gold);  color: var(--black); }
-
-    .visit-btn {
-      color: var(--sage);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: color 0.12s ease;
-    }
-
-    .visit-btn:hover { color: var(--black); }
-
-    .visit-btn::after {
-      content: '↗';
-      font-size: 0.78rem;
-    }
-
-    /* ── COMING SOON CARD ── */
-    .card-coming {
-      border-style: dashed;
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 220px;
-      color: var(--rose);
-      font-size: 0.82rem;
-      font-style: italic;
-      gap: 0.4rem;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .card-coming .coming-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    /* ── CTA SECTION ── */
-    .cta-section {
-      background-color: var(--sage);
-      padding: 3rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .cta-text h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .cta-text p {
-      color: var(--parchment);
-      font-size: 0.88rem;
-      margin-top: 0.5rem;
-      max-width: 400px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 0.75rem;
-      flex-shrink: 0;
-    }
-
-    .btn-primary {
-      background-color: var(--dusty);
-      border: 1px solid var(--dusty);
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.7rem 1.5rem;
-      border-radius: 2px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background-color 0.15s ease;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--black);
-      border-color: var(--black);
-    }
-
-    .btn-ghost {
-      background-color: transparent;
-      border: 1px solid var(--parchment);
-      color: var(--parchment);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.7rem 1.5rem;
-      border-radius: 2px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background-color 0.15s ease, color 0.15s ease;
-    }
-
-    .btn-ghost:hover {
-      background-color: var(--parchment);
-      color: var(--black);
-    }
-
-    /* ── FOOTER ── */
-    .site-footer {
-      padding: 1.25rem 2.5rem;
-      border-top: 1px solid var(--rose);
-      font-size: 0.73rem;
-      color: var(--sage);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .intro { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-      .intro-stats { gap: 1.5rem; }
-      .cta-section { flex-direction: column; align-items: flex-start; }
-    }
-
-    @media (max-width: 600px) {
-      .site-header  { padding: 1.25rem 1.25rem; }
-      .intro        { padding: 2rem 1.25rem; }
-      .portfolio    { padding: 1.75rem 1.25rem 2.5rem; }
-      .cta-section  { padding: 2rem 1.25rem; }
-      .site-footer  { padding: 1rem 1.25rem; flex-direction: column; align-items: flex-start; }
-      .cta-buttons  { flex-direction: column; width: 100%; }
-      .btn-primary, .btn-ghost { text-align: center; }
-      .header-text h1 { font-size: 1.15rem; }
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Manrope',system-ui,sans-serif; color:#14181E; background:#FAF9F6; -webkit-font-smoothing:antialiased; }
+    section { scroll-margin-top:84px; }
+    a { color:inherit; text-decoration:none; }
+    button { font-family:inherit; cursor:pointer; border:none; }
+    input,textarea,select { font-family:inherit; }
   </style>
 </head>
 <body>
 
-  <!-- ══════════════════════════════════
-       HEADER
-  ══════════════════════════════════ -->
-  <header class="site-header">
-    <div class="header-left">
-      <img class="header-logo" src="images/logo.png" alt="SageOwl Sites owl logo">
-      <div class="header-text">
-        <h1>SageOwl Sites</h1>
-        <p class="tagline">Websites for local businesses</p>
+<div style="overflow-x:hidden; background:#FAF9F6;">
+
+  <!-- DEMO BANNER -->
+  <div data-demo-banner style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; background:#14181E; color:#fff; padding:9px 18px; font-size:13px; text-align:center;">
+    <span style="display:inline-flex; align-items:center; gap:7px; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#F2761C; font-weight:600;">● Demo Site</span>
+    <span style="opacity:0.85;">Built by SageOwl Sites for <strong style="font-weight:700;">Avon &amp; West Plumbing</strong> — not yet live. Ready for your approval.</span>
+  </div>
+
+  <!-- LEGEND -->
+  <div data-annotate style="background:#FFF; border-bottom:1px solid #E8E6E0;">
+    <div style="max-width:1180px; margin:0 auto; padding:13px 24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap;">
+      <span style="font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:#5A6270; font-weight:600;">What you'll need to provide →</span>
+      <span style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;"><span style="width:13px; height:13px; border-radius:4px; background:#F2761C;"></span>Photos</span>
+      <span style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;"><span style="width:13px; height:13px; border-radius:4px; background:#1B4DB8;"></span>Wording to confirm</span>
+      <span style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;"><span style="width:13px; height:13px; border-radius:4px; background:#14181E;"></span>Contact &amp; legal details</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid #ECEAE4;">
+    <div style="max-width:1180px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="#top" style="display:flex; align-items:center; gap:11px;">
+        <span style="width:42px; height:42px; border-radius:50%; background:#1B4DB8; display:flex; align-items:center; justify-content:center; flex:none;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" fill="#fff"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5" stroke="#1B4DB8" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <span style="line-height:1.05;">
+          <span style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:19px; letter-spacing:-0.01em; color:#14181E;">Avon &amp; West</span>
+          <span style="display:block; font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#F2761C;">Plumbing &amp; Heating</span>
+        </span>
+      </a>
+      <nav style="display:flex; align-items:center; gap:28px;">
+        <a href="#services" style="font-size:15px; font-weight:600; color:#3A414C;">Services</a>
+        <a href="#about" style="font-size:15px; font-weight:600; color:#3A414C;">About</a>
+        <a href="#reviews" style="font-size:15px; font-weight:600; color:#3A414C;">Reviews</a>
+        <a href="#areas" style="font-size:15px; font-weight:600; color:#3A414C;">Areas</a>
+        <a href="#contact" style="font-size:15px; font-weight:600; color:#3A414C;">Contact</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span data-annotate style="display:inline-flex; align-items:center; gap:6px; padding:4px 9px; border-radius:999px; background:#14181E; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Real number</span>
+        <a href="tel:01171234567" style="display:inline-flex; align-items:center; gap:8px; background:#F2761C; color:#fff; padding:11px 18px; border-radius:11px; font-weight:700; font-size:15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          0117 123 4567
+        </a>
       </div>
     </div>
-    <!-- UPDATE: Replace with your real email address -->
-    <a class="header-cta" href="mailto:sos@sageowlstrategy.com">Get in touch</a>
   </header>
 
-
-  <!-- ══════════════════════════════════
-       INTRO + STATS
-  ══════════════════════════════════ -->
-  <section class="intro">
-    <div class="intro-text">
-      <h2>Affordable, professional websites, done for you.</h2>
-      <p>
-        I build fast, mobile-friendly websites for local UK businesses.
-        Every site includes on-page SEO, Google Analytics set-up, and
-        help getting your domain pointed to the live site. No retainer,
-        no monthly fees beyond hosting, just a website that works.
-      </p>
-    </div>
-    <div class="intro-stats">
-      <!--
-        Update these numbers manually as you build more sites,
-        or let the JS at the bottom count them automatically.
-      -->
-      <div class="stat">
-        <span class="stat-number" id="stat-built">0</span>
-        <span class="stat-label">Sites Built</span>
+  <!-- HERO -->
+  <section id="top" style="background:linear-gradient(180deg,#FFFFFF 0%,#FAF9F6 100%);">
+    <div style="max-width:1180px; margin:0 auto; padding:64px 24px 56px; display:flex; gap:56px; align-items:center; flex-wrap:wrap;">
+      <div style="flex:1 1 420px; min-width:300px;">
+        <span style="display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; background:#EAF0FC; color:#1B4DB8; font-weight:700; font-size:13px; letter-spacing:0.01em;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#1B4DB8;"></span> Bristol's friendly local plumbers
+        </span>
+        <h1 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(38px,5vw,58px); line-height:1.04; letter-spacing:-0.02em; margin:20px 0 0; color:#14181E; text-wrap:balance;">Plumbing &amp; heating you can <span style="color:#1B4DB8;">actually trust</span>.</h1>
+        <p style="font-size:19px; line-height:1.6; color:#5A6270; margin:22px 0 0; max-width:520px;">Family-run, Gas Safe registered and just round the corner. From dripping taps to full boiler installs — we'll be there when we say we will, with no call-out fee and a free, honest quote.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin:32px 0 0;">
+          <a href="#contact" style="display:inline-flex; align-items:center; gap:9px; background:#1B4DB8; color:#fff; padding:16px 26px; border-radius:13px; font-weight:700; font-size:16px;">Get a free quote
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="tel:01171234567" style="display:inline-flex; align-items:center; gap:9px; background:#fff; color:#14181E; padding:16px 24px; border-radius:13px; font-weight:700; font-size:16px; border:1.5px solid #E2DFD8;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="#14181E" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Call now
+          </a>
+        </div>
+        <div style="display:flex; gap:26px; flex-wrap:wrap; margin:34px 0 0;">
+          <div style="display:flex; align-items:center; gap:9px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F2761C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-weight:600; font-size:14.5px; color:#3A414C;">Gas Safe registered</span></div>
+          <div style="display:flex; align-items:center; gap:9px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F2761C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-weight:600; font-size:14.5px; color:#3A414C;">No call-out fee</span></div>
+          <div style="display:flex; align-items:center; gap:9px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#F2761C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-weight:600; font-size:14.5px; color:#3A414C;">Fully insured</span></div>
+        </div>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-number" id="stat-live">0</span>
-        <span class="stat-label">Live &amp; Trading</span>
+      <div style="flex:1 1 420px; min-width:300px; position:relative;">
+        <img src="images/hero.png" alt="Bristol plumber repairing a boiler" style="width:100%; aspect-ratio:4/3.4; object-fit:cover; border-radius:20px; display:block; box-shadow:0 20px 50px -28px rgba(20,24,30,0.45);" />
       </div>
     </div>
   </section>
 
-
-  <!-- ══════════════════════════════════
-       PORTFOLIO CARDS
-  ══════════════════════════════════ -->
-  <section class="portfolio">
-    <div class="portfolio-header">
-      <span class="section-label">Recent Work</span>
+  <!-- TRUST BAR -->
+  <section style="background:#14181E; color:#fff;">
+    <div style="max-width:1180px; margin:0 auto; padding:30px 24px; display:flex; justify-content:space-between; gap:26px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:13px;">
+        <div style="display:flex; align-items:center; gap:3px;">
+          <svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg>
+          <svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg>
+          <svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg>
+          <svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg>
+          <svg width="19" height="19" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg>
+        </div>
+        <span style="font-weight:700; font-size:15px;">4.9 / 5 <span style="opacity:0.65; font-weight:500;">· 87 Google reviews</span></span>
+        <span data-annotate style="display:inline-flex; align-items:center; padding:4px 9px; border-radius:999px; background:#1B4DB8; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Pull from Google</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:11px; font-weight:600; font-size:15px;"><span style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:22px; color:#F2761C;">15+</span> years serving Bristol</div>
+      <div style="display:flex; align-items:center; gap:11px; font-weight:600; font-size:15px;"><span style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:22px; color:#F2761C;">24/7</span> emergency call-outs</div>
+      <div style="display:flex; align-items:center; gap:11px; font-weight:600; font-size:15px;">Local &amp; family-run</div>
     </div>
+  </section>
 
-    <div class="card-grid">
+  <!-- SERVICES -->
+  <section id="services" style="max-width:1180px; margin:0 auto; padding:80px 24px;">
+    <div style="text-align:center; max-width:620px; margin:0 auto 48px;">
+      <span style="font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; color:#1B4DB8;">What we do</span>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(30px,3.6vw,42px); line-height:1.1; letter-spacing:-0.02em; margin:12px 0 0; color:#14181E;">Every job, big or small</h2>
+      <p style="font-size:17px; color:#5A6270; margin:14px 0 0; line-height:1.6;">No job too small, no boiler too temperamental. Here's what we're called out for most.<span data-annotate style="display:inline-block; margin-left:8px; vertical-align:middle; padding:3px 9px; border-radius:999px; background:#1B4DB8; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Confirm your services</span></p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:30px;">
+        <span style="width:52px; height:52px; border-radius:14px; background:#EAF0FC; display:flex; align-items:center; justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1B4DB8" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="#1B4DB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:18px 0 0; color:#14181E;">Emergency &amp; 24hr call-outs</h3>
+        <p style="font-size:15px; color:#5A6270; line-height:1.6; margin:9px 0 0;">Burst pipe at midnight? We're on call around the clock for the things that just can't wait.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:30px;">
+        <span style="width:52px; height:52px; border-radius:14px; background:#EAF0FC; display:flex; align-items:center; justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2.5" stroke="#1B4DB8" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="#1B4DB8" stroke-width="1.6"/><path d="M9 15h6" stroke="#1B4DB8" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:18px 0 0; color:#14181E;">Boiler installation &amp; repair</h3>
+        <p style="font-size:15px; color:#5A6270; line-height:1.6; margin:9px 0 0;">New boilers supplied and fitted, plus servicing and repairs to keep yours running safely.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:30px;">
+        <span style="width:52px; height:52px; border-radius:14px; background:#EAF0FC; display:flex; align-items:center; justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#1B4DB8" stroke-width="1.8"/><circle cx="12" cy="12" r="3.5" stroke="#1B4DB8" stroke-width="1.6"/></svg></span>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:18px 0 0; color:#14181E;">Drain unblocking</h3>
+        <p style="font-size:15px; color:#5A6270; line-height:1.6; margin:9px 0 0;">Slow sinks and blocked drains cleared fast, with the cause sorted — not just shifted.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:30px;">
+        <span style="width:52px; height:52px; border-radius:14px; background:#EAF0FC; display:flex; align-items:center; justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" stroke="#1B4DB8" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:18px 0 0; color:#14181E;">Leak detection &amp; repair</h3>
+        <p style="font-size:15px; color:#5A6270; line-height:1.6; margin:9px 0 0;">We track down hidden leaks before they damage your home, then fix them properly.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:30px;">
+        <span style="width:52px; height:52px; border-radius:14px; background:#EAF0FC; display:flex; align-items:center; justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="14" rx="2.5" stroke="#1B4DB8" stroke-width="1.8"/><path d="M8.5 5v14M12 5v14M15.5 5v14" stroke="#1B4DB8" stroke-width="1.5"/></svg></span>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:18px 0 0; color:#14181E;">Central heating &amp; radiators</h3>
+        <p style="font-size:15px; color:#5A6270; line-height:1.6; margin:9px 0 0;">Radiator swaps, power flushes and full heating systems — a warmer home, lower bills.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:30px;">
+        <span style="width:52px; height:52px; border-radius:14px; background:#EAF0FC; display:flex; align-items:center; justify-content:center;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3c1 3 4 4.2 4 8a4 4 0 0 1-8 0c0-2.2 1.2-3.2 2.2-4.2.4 2 1.8 2.2 1.8 4z" stroke="#1B4DB8" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:18px 0 0; color:#14181E;">Gas safety &amp; certificates</h3>
+        <p style="font-size:15px; color:#5A6270; line-height:1.6; margin:9px 0 0;">Gas Safe checks, landlord certificates (CP12) and appliance servicing you can rely on.</p>
+      </div>
+    </div>
+  </section>
 
-      <!--
-      ╔══════════════════════════════════════════════════════════╗
-      ║  HOW TO ADD A NEW SITE CARD                              ║
-      ║  Copy any .site-card block, paste below, and update:     ║
-      ║  · card-band class: band-sage / band-black /             ║
-      ║    band-gold / band-dusty / band-rose                    ║
-      ║  · the large letter inside .card-band                    ║
-      ║  · .card-name, .card-meta, .card-desc                    ║
-      ║  · badge class: badge-live / badge-demo / badge-built    ║
-      ║  · href on the Visit Site link                           ║
-      ╚══════════════════════════════════════════════════════════╝
-      -->
-
-      <!-- ── LittleWoofs Dog Walking ── -->
-      <article class="site-card">
-        <div class="card-band band-sage">L</div>
-        <div class="card-body">
-          <h3 class="card-name">LittleWoofs Dog Walking</h3>
-          <p class="card-meta">Dog Walker &middot; Thamesmead &amp; Barking, London</p>
-          <p class="card-desc">
-            A welfare-first dog walking service run by an MDWA-certified walker.
-            Five-page site covering services, pricing, reviews, about, and contact —
-            built to convert local Google searches into enquiries.
-          </p>
+  <!-- ABOUT -->
+  <section id="about" style="background:#fff; border-top:1px solid #ECEAE4; border-bottom:1px solid #ECEAE4;">
+    <div style="max-width:1180px; margin:0 auto; padding:80px 24px; display:flex; gap:56px; align-items:center; flex-wrap:wrap;">
+      <div style="flex:1 1 360px; min-width:280px; position:relative;">
+        <img src="images/plumber.png" alt="Tom Hartley, owner of Avon & West Plumbing" style="width:100%; aspect-ratio:1/1.05; object-fit:cover; border-radius:20px; display:block; box-shadow:0 20px 50px -28px rgba(20,24,30,0.45);" />
+      </div>
+      <div style="flex:1 1 420px; min-width:300px;">
+        <span style="font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; color:#1B4DB8;">Meet the team</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(30px,3.6vw,42px); line-height:1.1; letter-spacing:-0.02em; margin:12px 0 0; color:#14181E;">A familiar face, not a faceless call centre</h2>
+        <p style="font-size:17px; color:#5A6270; line-height:1.7; margin:18px 0 0;">Avon &amp; West was started by <strong style="color:#14181E;">Tom Hartley</strong>, a Bristol dad who got tired of hearing how hard it was to find a plumber who turned up, explained things plainly and charged a fair price. Today it's still a small family team — the same person who quotes your job is the one who does it.</p>
+        <span data-annotate style="display:inline-flex; align-items:center; gap:7px; margin:14px 0 0; padding:5px 11px; border-radius:999px; background:#1B4DB8; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Confirm owner name &amp; story</span>
+        <div style="display:flex; gap:30px; flex-wrap:wrap; margin:28px 0 0;">
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:34px; color:#1B4DB8;">15+</div><div style="font-size:14px; color:#5A6270; font-weight:500;">years' experience</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:34px; color:#1B4DB8;">2,000+</div><div style="font-size:14px; color:#5A6270; font-weight:500;">jobs completed</div></div>
+          <div><div style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:34px; color:#1B4DB8;">100%</div><div style="font-size:14px; color:#5A6270; font-weight:500;">Gas Safe registered</div></div>
         </div>
-        <div class="card-footer">
-          <span class="badge badge-demo">Demo Build</span>
-          <a class="visit-btn"
-             href="https://shannon-inthefeed.github.io/little-woofs/"
-             target="_blank" rel="noopener">Visit Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" style="max-width:1180px; margin:0 auto; padding:80px 24px;">
+    <div style="text-align:center; max-width:620px; margin:0 auto 48px;">
+      <span style="font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; color:#1B4DB8;">Loved in Bristol</span>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(30px,3.6vw,42px); line-height:1.1; letter-spacing:-0.02em; margin:12px 0 0; color:#14181E;">What your neighbours say</h2>
+      <p style="font-size:17px; color:#5A6270; margin:14px 0 0; line-height:1.6;">Rated 4.9 out of 5 across 87 Google reviews.<span data-annotate style="display:inline-block; margin-left:8px; vertical-align:middle; padding:3px 9px; border-radius:999px; background:#1B4DB8; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Swap in real reviews</span></p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:28px;">
+        <div style="display:flex; gap:2px; margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg></div>
+        <p style="font-size:15.5px; color:#3A414C; line-height:1.65;">"Came out the same day for our leaking boiler, talked us through every option and the price was exactly what he quoted. Couldn't recommend more."</p>
+        <div style="margin-top:18px; font-weight:700; font-size:14px; color:#14181E;">Sarah M. <span style="font-weight:500; color:#9AA0AB;">· Bishopston</span></div>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:28px;">
+        <div style="display:flex; gap:2px; margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg></div>
+        <p style="font-size:15.5px; color:#3A414C; line-height:1.65;">"Replaced our whole central heating system in two days, tidy and on time. Lovely, honest people — exactly what you want in your home."</p>
+        <div style="margin-top:18px; font-weight:700; font-size:14px; color:#14181E;">James &amp; Priya <span style="font-weight:500; color:#9AA0AB;">· Redland</span></div>
+      </div>
+      <div style="background:#fff; border:1px solid #ECEAE4; border-radius:18px; padding:28px;">
+        <div style="display:flex; gap:2px; margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2l2.9 6 6.6.6-5 4.3 1.5 6.4L12 16.9 6 19.8l1.5-6.4-5-4.3 6.6-.6z" fill="#F2761C"/></svg></div>
+        <p style="font-size:15.5px; color:#3A414C; line-height:1.65;">"Blocked drain sorted within the hour on a Sunday. No silly emergency surcharge either. Saved as my go-to plumber now."</p>
+        <div style="margin-top:18px; font-weight:700; font-size:14px; color:#14181E;">Dave R. <span style="font-weight:500; color:#9AA0AB;">· Bedminster</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section id="areas" style="background:#fff; border-top:1px solid #ECEAE4; border-bottom:1px solid #ECEAE4;">
+    <div style="max-width:1180px; margin:0 auto; padding:80px 24px; display:flex; gap:56px; align-items:center; flex-wrap:wrap;">
+      <div style="flex:1 1 380px; min-width:300px;">
+        <span style="font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; color:#1B4DB8;">Where we work</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(30px,3.6vw,42px); line-height:1.1; letter-spacing:-0.02em; margin:12px 0 0; color:#14181E;">Covering Bristol &amp; surrounding areas</h2>
+        <p style="font-size:17px; color:#5A6270; line-height:1.65; margin:16px 0 0;">If you're in or around Bristol, we can help. Not sure if you're in our patch? Just give us a call.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0;">
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Clifton</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Redland</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Bishopston</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Bedminster</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Southville</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Horfield</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Fishponds</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Henleaze</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">St George</span>
+          <span style="padding:8px 15px; border-radius:999px; background:#F4F6FA; border:1px solid #E6E9EF; font-weight:600; font-size:14px; color:#3A414C;">Kingswood</span>
         </div>
-      </article>
+        <span data-annotate style="display:inline-flex; align-items:center; gap:7px; margin:20px 0 0; padding:5px 11px; border-radius:999px; background:#1B4DB8; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Confirm areas covered</span>
+      </div>
+      <div style="flex:1 1 380px; min-width:300px; position:relative;">
+        <span data-annotate style="position:absolute; bottom:14px; left:14px; z-index:2; display:inline-flex; align-items:center; gap:7px; padding:6px 12px; border-radius:999px; background:#1B4DB8; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:11px; font-weight:600; letter-spacing:0.03em; text-transform:uppercase;">Swap for live Google Map embed</span>
+        <img src="images/bristol_map.png" alt="Map of Bristol service area" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:20px; display:block; box-shadow:0 20px 50px -28px rgba(20,24,30,0.45);" />
+      </div>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <section id="contact" style="max-width:1180px; margin:0 auto; padding:80px 24px;">
+    <div style="display:flex; gap:48px; flex-wrap:wrap; align-items:flex-start;">
+      <div style="flex:1 1 380px; min-width:300px;">
+        <span style="font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; color:#1B4DB8;">Get in touch</span>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(30px,3.6vw,42px); line-height:1.1; letter-spacing:-0.02em; margin:12px 0 0; color:#14181E;">Let's get it sorted</h2>
+        <p style="font-size:17px; color:#5A6270; line-height:1.65; margin:14px 0 24px;">Call, message or send the form — whatever's easiest. We'll get back to you the same day with a free, no-obligation quote.</p>
 
-      <!--
-      TEMPLATE — copy, paste above this comment, and fill in:
-
-      <article class="site-card">
-        <div class="card-band band-black">H</div>
-        <div class="card-body">
-          <h3 class="card-name">Harris Plumbing</h3>
-          <p class="card-meta">Plumber &middot; Birmingham</p>
-          <p class="card-desc">
-            Brief description of the business and what the site covers.
-          </p>
+        <div style="display:flex; flex-direction:column; gap:13px;">
+          <a href="tel:01171234567" style="display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:14px; background:#1B4DB8; color:#fff;">
+            <span style="width:42px; height:42px; border-radius:11px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span style="flex:1;"><span style="display:block; font-size:13px; opacity:0.8;">Call us</span><span style="display:block; font-weight:700; font-size:18px;">0117 123 4567</span></span>
+            <span data-annotate style="display:inline-flex; padding:4px 9px; border-radius:999px; background:#14181E; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Real no.</span>
+          </a>
+          <a href="https://wa.me/441171234567" style="display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:14px; background:#fff; border:1.5px solid #E2DFD8; color:#14181E;">
+            <span style="width:42px; height:42px; border-radius:11px; background:#FBEEE1; display:flex; align-items:center; justify-content:center; flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4A8 8 0 1 1 9 19.5L4 20z" stroke="#F2761C" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span style="flex:1;"><span style="display:block; font-size:13px; color:#9AA0AB;">WhatsApp</span><span style="display:block; font-weight:700; font-size:18px;">Message us</span></span>
+            <span data-annotate style="display:inline-flex; padding:4px 9px; border-radius:999px; background:#14181E; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Real no.</span>
+          </a>
+          <a href="/cdn-cgi/l/email-protection#7018151c1c1f3011061f1e07150304001c051d12191e175e131f5e051b" style="display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:14px; background:#fff; border:1.5px solid #E2DFD8; color:#14181E;">
+            <span style="width:42px; height:42px; border-radius:11px; background:#EAF0FC; display:flex; align-items:center; justify-content:center; flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#1B4DB8" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="#1B4DB8" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span style="flex:1;"><span style="display:block; font-size:13px; color:#9AA0AB;">Email</span><span style="display:block; font-weight:700; font-size:16px;"><span class="__cf_email__" data-cfemail="a7cfc2cbcbc8e7c6d1c8c9d0c2d4d3d7cbd2cac5cec9c089c4c889d2cc">[email&#160;protected]</span></span></span>
+            <span data-annotate style="display:inline-flex; padding:4px 9px; border-radius:999px; background:#14181E; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Real email</span>
+          </a>
         </div>
-        <div class="card-footer">
-          <span class="badge badge-live">Live</span>
-          <a class="visit-btn"
-             href="https://harrisplumbing.co.uk"
-             target="_blank" rel="noopener">Visit Site</a>
-        </div>
-      </article>
-      -->
 
-      <!-- Remove this placeholder once you have 3+ real cards -->
-      <div class="site-card card-coming">
-        <div class="coming-icon">&#128640;</div>
-        <span>More sites coming soon</span>
+        <div style="display:flex; align-items:center; gap:10px; margin:22px 0 0; padding:14px 16px; border-radius:12px; background:#F4F6FA; border:1px solid #E6E9EF;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1B4DB8" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="#1B4DB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span style="font-size:14.5px; color:#3A414C;"><strong style="color:#14181E;">Mon–Fri 8am–6pm</strong> · Sat 9am–2pm · 24/7 emergencies</span>
+        </div>
       </div>
 
+      <div style="flex:1 1 380px; min-width:300px;">
+        <div style="background:#fff; border:1px solid #ECEAE4; border-radius:20px; padding:32px; box-shadow:0 14px 40px -22px rgba(20,24,30,0.25);">
+          <form id="quoteForm">
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:23px; margin:0 0 4px; color:#14181E;">Request a free quote</h3>
+            <p style="font-size:14.5px; color:#9AA0AB; margin:0 0 22px;">We'll reply the same working day.</p>
+            <label style="display:block; font-weight:600; font-size:13.5px; color:#3A414C; margin-bottom:7px;">Your name</label>
+            <input type="text" name="name" placeholder="e.g. Jane Smith" required style="width:100%; padding:13px 15px; border-radius:11px; border:1.5px solid #E2DFD8; font-size:15px; background:#FCFBF9; margin-bottom:16px;" />
+            <label style="display:block; font-weight:600; font-size:13.5px; color:#3A414C; margin-bottom:7px;">Phone</label>
+            <input type="tel" name="phone" placeholder="e.g. 07700 900000" style="width:100%; padding:13px 15px; border-radius:11px; border:1.5px solid #E2DFD8; font-size:15px; background:#FCFBF9; margin-bottom:16px;" />
+            <label style="display:block; font-weight:600; font-size:13.5px; color:#3A414C; margin-bottom:7px;">Email</label>
+            <input type="email" name="email" placeholder="you@example.com" style="width:100%; padding:13px 15px; border-radius:11px; border:1.5px solid #E2DFD8; font-size:15px; background:#FCFBF9; margin-bottom:16px;" />
+            <label style="display:block; font-weight:600; font-size:13.5px; color:#3A414C; margin-bottom:7px;">What do you need?</label>
+            <select name="service" style="width:100%; padding:13px 15px; border-radius:11px; border:1.5px solid #E2DFD8; font-size:15px; background:#FCFBF9; margin-bottom:16px; color:#3A414C;">
+              <option>Emergency / 24hr call-out</option>
+              <option>Boiler installation or repair</option>
+              <option>Drain unblocking</option>
+              <option>Leak detection &amp; repair</option>
+              <option>Central heating / radiators</option>
+              <option>Gas safety / certificate</option>
+              <option>Something else</option>
+            </select>
+            <label style="display:block; font-weight:600; font-size:13.5px; color:#3A414C; margin-bottom:7px;">Message</label>
+            <textarea name="message" rows="3" placeholder="Tell us a bit about the job…" style="width:100%; padding:13px 15px; border-radius:11px; border:1.5px solid #E2DFD8; font-size:15px; background:#FCFBF9; margin-bottom:20px; resize:vertical;"></textarea>
+            <button type="submit" style="width:100%; padding:16px; border-radius:13px; background:#F2761C; color:#fff; font-weight:700; font-size:16px;">Send my request</button>
+            <p style="font-size:12.5px; color:#9AA0AB; text-align:center; margin:14px 0 0;">No spam, no call-out fee, no obligation.</p>
+          </form>
+          <div id="quoteThanks" style="display:none; text-align:center; padding:30px 10px;">
+            <span style="width:62px; height:62px; border-radius:50%; background:#EAF0FC; display:inline-flex; align-items:center; justify-content:center; margin-bottom:18px;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#1B4DB8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:24px; color:#14181E; margin:0 0 8px;">Thanks — got it!</h3>
+            <p style="font-size:16px; color:#5A6270; line-height:1.6; max-width:300px; margin:0 auto;">We'll be in touch the same working day with your free quote.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-
-  <!-- ══════════════════════════════════
-       CTA
-  ══════════════════════════════════ -->
-  <section class="cta-section">
-    <div class="cta-text">
-      <h3>Like what you see?</h3>
-      <p>
-        A professional website gives your business credibility, helps customers
-        find you on Google, and works for you 24&thinsp;/&thinsp;7.
-        I can have yours ready within a week.
-      </p>
+  <!-- FOOTER -->
+  <footer style="background:#14181E; color:#fff;">
+    <div style="max-width:1180px; margin:0 auto; padding:56px 24px 30px; display:flex; gap:40px; flex-wrap:wrap; justify-content:space-between;">
+      <div style="flex:1 1 300px; min-width:260px;">
+        <div style="display:flex; align-items:center; gap:11px; margin-bottom:16px;">
+          <span style="width:40px; height:40px; border-radius:50%; background:#1B4DB8; display:flex; align-items:center; justify-content:center; flex:none;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" fill="#fff"/></svg></span>
+          <span style="line-height:1.05;"><span style="display:block; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px;">Avon &amp; West</span><span style="display:block; font-size:9.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#F2761C;">Plumbing &amp; Heating</span></span>
+        </div>
+        <p style="font-size:14.5px; color:#9AA0AB; line-height:1.65; max-width:300px;">Friendly, family-run plumbing &amp; heating across Bristol. Gas Safe registered and fully insured.</p>
+        <div style="display:flex; align-items:center; gap:9px; margin-top:16px;">
+          <span style="display:inline-flex; align-items:center; gap:7px; padding:6px 12px; border-radius:8px; background:rgba(255,255,255,0.08); font-size:12.5px; font-weight:600;">Gas Safe Reg: <span style="color:#F2761C;">000000</span></span>
+          <span data-annotate style="display:inline-flex; padding:5px 9px; border-radius:999px; background:#F2761C; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Add reg no.</span>
+        </div>
+      </div>
+      <div style="flex:0 1 auto;">
+        <div style="font-weight:700; font-size:14px; margin-bottom:14px; color:#fff;">Quick links</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <a href="#services" style="font-size:14.5px; color:#9AA0AB;">Services</a>
+          <a href="#about" style="font-size:14.5px; color:#9AA0AB;">About</a>
+          <a href="#reviews" style="font-size:14.5px; color:#9AA0AB;">Reviews</a>
+          <a href="#areas" style="font-size:14.5px; color:#9AA0AB;">Areas covered</a>
+          <a href="#contact" style="font-size:14.5px; color:#9AA0AB;">Contact</a>
+        </div>
+      </div>
+      <div style="flex:0 1 auto;">
+        <div style="font-weight:700; font-size:14px; margin-bottom:14px; color:#fff;">Get in touch</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <a href="tel:01171234567" style="font-size:14.5px; color:#9AA0AB;">0117 123 4567</a>
+          <a href="/cdn-cgi/l/email-protection#ef878a838380af8e998081988a9c9b9f839a828d868188c18c80c19a84" style="font-size:14.5px; color:#9AA0AB;"><span class="__cf_email__" data-cfemail="ddb5b8b1b1b29dbcabb2b3aab8aea9adb1a8b0bfb4b3baf3beb2f3a8b6">[email&#160;protected]</span></a>
+          <span style="font-size:14.5px; color:#9AA0AB;">Mon–Fri 8am–6pm</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; margin-top:2px;"><span data-annotate style="display:inline-flex; padding:5px 9px; border-radius:999px; background:#F2761C; color:#fff; font-family:'SFMono-Regular',Menlo,Consolas,monospace; font-size:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;">Confirm address</span></span>
+        </div>
+      </div>
     </div>
-    <div class="cta-buttons">
-      <!-- UPDATE: Replace with your real contact details -->
-      <a class="btn-primary" href="mailto:sos@sageowlstrategy.com">Get in touch</a>
-      <a class="btn-ghost" href="https://sageowlstrategy.com/about" target="_blank" rel="noopener">About SageOwl</a>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);">
+      <div style="max-width:1180px; margin:0 auto; padding:18px 24px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; align-items:center;">
+        <span style="font-size:13px; color:#6B727E;">© 2026 Avon &amp; West Plumbing &amp; Heating. All rights reserved.</span>
+        <span style="font-size:13px; color:#6B727E;">Website by <span style="color:#9AA0AB; font-weight:600;">SageOwl Sites</span></span>
+      </div>
     </div>
-  </section>
-
-
-  <!-- ══════════════════════════════════
-       FOOTER
-  ══════════════════════════════════ -->
-  <footer class="site-footer">
-    <span>&copy; 2026 SageOwl Sites &mdash; Shannon Kuykendall</span>
-    <span>Shared by direct link &mdash; not indexed by search engines</span>
   </footer>
 
+  <!-- STICKY MOBILE CALL BAR -->
+  <div data-sticky-call style="display:flex; position:fixed; bottom:0; left:0; right:0; z-index:60; gap:10px; padding:11px 14px; background:rgba(255,255,255,0.96); backdrop-filter:blur(10px); border-top:1px solid #E8E6E0; box-shadow:0 -8px 30px -18px rgba(20,24,30,0.4);">
+    <a href="tel:01171234567" style="flex:1; display:flex; align-items:center; justify-content:center; gap:9px; padding:14px; border-radius:12px; background:#1B4DB8; color:#fff; font-weight:700; font-size:15px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Call now</a>
+    <a href="https://wa.me/441171234567" style="flex:1; display:flex; align-items:center; justify-content:center; gap:9px; padding:14px; border-radius:12px; background:#F2761C; color:#fff; font-weight:700; font-size:15px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4A8 8 0 1 1 9 19.5L4 20z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>WhatsApp</a>
+  </div>
 
-  <!-- ══════════════════════════════════
-       JS — auto-count stats from cards
-  ══════════════════════════════════ -->
-  <script>
-    var cards = document.querySelectorAll('.site-card:not(.card-coming)');
-    var live  = document.querySelectorAll('.badge-live').length;
-    document.getElementById('stat-built').textContent = cards.length;
-    document.getElementById('stat-live').textContent  = live;
-  </script>
+</div>
 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Demo form handler. For the LIVE site, point the form at a service like
+  // Formspree / Web3Forms (set <form action="..." method="POST">) so submissions reach the client.
+  var qf = document.getElementById('quoteForm');
+  if (qf) {
+    qf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      qf.style.display = 'none';
+      document.getElementById('quoteThanks').style.display = 'block';
+    });
+  }
+</script>
 </body>
 </html>
